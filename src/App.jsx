@@ -7,8 +7,10 @@ function App() {
 
   return (
     <>
+    <div className='bg-[#97E1FE]'>
     <Navbar/>
       <Home/>
+    </div>
     </>
   )
 }

@@ -78,8 +78,8 @@ function Home() {
 
   return (
     <>
-      <div className='w-full bg-[#97E1FE] overflow-hidden md:overflow-visible flex justify-evenly md:flex-col items-center md:h-fit md:pt-[5rem] h-[100vh]'>
-        <div><form className='form bg-red-200 p-10 flex  flex-col w-[26rem] h-[35rem] justify-evenly items-center ' action="">
+      <div className='w-full bg-[#97E1FE] overflow-hidden md:overflow-visible flex justify-evenly md:flex-col items-center md:h-fit md:pt-5 h-[100vh]'>
+        <div><form className='form bg-red-200 p-10 flex  flex-col md:w-[22rem] w-[26rem] h-[35rem] md:h-[38rem] justify-evenly items-center ' action="">
           <input onChange={handleBp} className='bg-transparent placeholder-black py-2 w-[90%] outline-none border-b-2 border-black' placeholder='Blood Pressure' type="text" />
           <input onChange={handleAlbumin} className='bg-transparent placeholder-black py-2 w-[90%] outline-none border-b-2 border-black' placeholder='Albumin' type="text" />
           <input onChange={handleUrea} className='bg-transparent placeholder-black py-2 w-[90%] outline-none border-b-2 border-black' placeholder='Blood Urea' type="text" />
@@ -91,7 +91,7 @@ function Home() {
           <input onChange={handleRbcc} className='bg-transparent placeholder-black py-2 w-[90%] outline-none border-b-2 border-black' placeholder='Red BloodCells Count(in Millions e.g. 1.5)' type="text" />
           <input onChange={handleHighbp} className='bg-transparent placeholder-black py-2 w-[90%] outline-none border-b-2 border-black' placeholder='Hypertention' type="text" />
           <input onClick={handleRequest} className='p-2 bg-blue-100 rounded-lg w-[90%] mt-[1rem]' type="submit" value="Predict" />
-        <div className="py-3 prediction font-bold">{loading?"Loading, Please Wait!": prediction}</div>
+        <div className="py-3 prediction md:text-sm">{loading?"Loading, Please Wait!": prediction}</div>
         </form>
         </div>
         <div className="image">
