@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import kidney from "./../Utilities/Kidney.jpg"
+import kidney from "./../Utilities/kidney.jpg"
 import axios from 'axios'
 
 function Home() {
@@ -78,7 +78,7 @@ function Home() {
 
   return (
     <>
-      <div className='w-full bg-[#97E1FE] overflow-hidden md:overflow-visible flex justify-evenly md:flex-col items-center md md:h-fit md:pt-[5rem] h-[100vh]'>
+      <div className='w-full bg-[#97E1FE] overflow-hidden md:overflow-visible flex justify-evenly md:flex-col items-center md:h-fit md:pt-[5rem] h-[100vh]'>
         <div><form className='form bg-red-200 p-10 flex  flex-col w-[26rem] h-[35rem] justify-evenly items-center ' action="">
           <input onChange={handleBp} className='bg-transparent placeholder-black py-2 w-[90%] outline-none border-b-2 border-black' placeholder='Blood Pressure' type="text" />
           <input onChange={handleAlbumin} className='bg-transparent placeholder-black py-2 w-[90%] outline-none border-b-2 border-black' placeholder='Albumin' type="text" />
