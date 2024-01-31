@@ -51,6 +51,17 @@ function Home() {
     setHighbp(e.target.value)
   }
 
+  const handlePrediction = (pred) => {
+    console.log(pred)
+    if (pred==0) {
+      setPrediction("You're safe but must take care of yourself!")
+      
+    } else {
+      setPrediction("You have chronic disease. Consult a doctor!")
+      
+    }
+  }
+
   const url = "https://chronic-kidney-disease-pred.onrender.com/chronic-kidney"
   const handleRequest = async (e) => {
     e.preventDefault()
@@ -71,8 +82,7 @@ function Home() {
       bp, albumin, urea, creatinine, sodium, pottash, haemo, wbcc, rbcc, highbp
     }
     ).then(res => {
-      res.data.class ? setPrediction("You have chronic disease. Consult a doctor!") : setPrediction("You're safe but must take care of yourself!")
-      console.log(prediction)
+      handlePrediction(res?.data?.class)
     })
     setLoading(false)
   }
@@ -125,7 +135,7 @@ function Home() {
                 id="hypertention"
                 className='w-[10rem] md:w-[6rem]'
                 label="hypertention"
-              onChange={handleHighbp}
+                onChange={handleHighbp}
               >
                 <MenuItem value={1}>Yes</MenuItem>
                 <MenuItem value={0}>No</MenuItem>
